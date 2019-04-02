@@ -30,7 +30,10 @@ var callbackFunc = (val) => {
  > 빠른 모바일 앱 개발을 위한 React-Native 부록 A-8
 
 <br/>
+
 * Promise는 나중에 실행되는 무언가를 나타내는 객체라 할 수있다. 성공과 실패 콜백 처리를 직접 구현할 필요가 없도록 promise는 비동기 연산을 대응하기 위한 API를 제공한다. 
+
+<br/>
 
 1) 성공 콜백
 ```javascript
