@@ -9,7 +9,7 @@
 + callback을 다룰 때 특히 많이 사용한다.
 
 
-= 수동으로 함수 바인딩
+* 수동으로 함수 바인딩
 
 ```
 var callbackFunc = function(val) {
@@ -17,7 +17,7 @@ var callbackFunc = function(val) {
 }.bind(this);
 ```
 
-= 바인딩을 위해 두꺼운 화살표 함수 사용
+* 바인딩을 위해 두꺼운 화살표 함수 사용
 
 ```
 var callbackFunc = (val) => {
