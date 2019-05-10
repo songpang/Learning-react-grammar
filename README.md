@@ -8,6 +8,12 @@
 * ES5 호환 자바스크립트에서는 함수가 실행되는 context(예를 들어 this 변수)를 명확히 하기 위해 함수 실행 시 bind명령을 이용하곤 한다.
 * callback을 다룰 때 특히 많이 사용한다.
 
+( ? callback 함수 : 콜백 함수란 1. 다른 함수의 인자로써 이용되는 함수. 2. 어떤 이벤트에 의해 호출되어지는 함수. )
+
+
+
+출처: https://satisfactoryplace.tistory.com/18 [만족]
+참고 : [CallBack함수의 정확한 의미는 무엇일까?](https://satisfactoryplace.tistory.com/18)
 <br/><br/>
   * 수동으로 함수 바인딩
 
