@@ -10,9 +10,6 @@
 
 ( ? callback 함수 : 콜백 함수란 1. 다른 함수의 인자로써 이용되는 함수. 2. 어떤 이벤트에 의해 호출되어지는 함수. )
 
-
-
-출처: https://satisfactoryplace.tistory.com/18 [만족]
 참고 : [CallBack함수의 정확한 의미는 무엇일까?](https://satisfactoryplace.tistory.com/18)
 <br/><br/>
   * 수동으로 함수 바인딩
