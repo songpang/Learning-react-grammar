@@ -1,5 +1,5 @@
 # Learning-react-grammar
-> 리액트를 공부하는 데 처음 마주하는 Javascript와 react-native의 문법이나 함수 들을 정리합니다.
+> 리액트(네이티브)를 공부하면서 몰랐던 지식들을 정리합니다.
 
 <br/><br/>
 ## 두꺼운 화살표 함수 ( => )
