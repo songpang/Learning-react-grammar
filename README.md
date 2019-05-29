@@ -5,13 +5,16 @@
 ## 두꺼운 화살표 함수 ( => )
  > 빠른 모바일 앱 개발을 위한 React-Native 부록 A-5
 
+* Arrow function은 새로운 ES6의 기능
 * ES5 호환 자바스크립트에서는 함수가 실행되는 context(예를 들어 this 변수)를 명확히 하기 위해 함수 실행 시 bind명령을 이용하곤 한다.
 * callback을 다룰 때 특히 많이 사용한다.
 
 ( ? callback 함수 : 콜백 함수란 1. 다른 함수의 인자로써 이용되는 함수. 2. 어떤 이벤트에 의해 호출되어지는 함수. )
 
 참고 : [CallBack함수의 정확한 의미는 무엇일까?](https://satisfactoryplace.tistory.com/18)
-<br/><br/>
+
+<br/>
+
   * 수동으로 함수 바인딩
 
 ```javascript
@@ -27,6 +30,63 @@ var callbackFunc = (val) => {
     console.log('Do Something');
 };
 ```
+
+* 추가적인 예시
+
+```javascript
+// regular function
+const testFunction = function() {
+  // content..
+}
+
+// arrow function
+const testFunction = () => {
+  // content..
+}
+```
+
+* parameters의 전달에는 여전히 괄호가 사용되며, parameter가 한 개라면 괄호가 생략될 수 있다.
+
+```javascript
+const testFunction = (firstName, lastName) => {
+  return firstName+' '+lastName;
+}
+
+const singleParam = firstName => {
+  return firstName;
+}
+```
+
+* implicit return
+> arrow function이 오직 한 줄이라면 return 키워드 없이 사용할 수 있다.
+
+```javascript
+const testFunction = () => 'hello there.';
+testFunction(); 
+```
+
+* Use in React
+> React component를 생성하는 또 다른 방법 ( arrow function을 사용하여 )
+> 하단의 두 코드는 동등한 수준의 코드
+
+```javascript
+const HelloWorld = (props) => {
+  return <h1>{props.hello}</h1>;
+}
+```
+```javascript
+class HelloWorld extends Component {
+  render() {
+    return (
+      <h1>{props.hello}</h1>;
+    );
+  }
+}
+```
+
+* arrow function의 사용은 코드를 간결하게 해주지만 component의 state사용을 제거한다.
+> statless functional component
+
 
 <br/><br/>
 ## Promise
