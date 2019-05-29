@@ -95,7 +95,7 @@ uploadToSomeAPI()
   .then(newDataResult => successCallBack(newDataResult))
   .catch(errorCallBack)
 ```
-
+<br/><br/>
 # 프레임워크와 라이브러리
 
 - 둘은 비슷하지만 다른 개념입니다. 둘다 개발에서 반복되는 작업을 줄여주는 역할을 한다는 점에서는 같습니다. 하지만 사용할 때 정해진 방식대로 코드를 짜도록 강요받는 것이 프레임워크, 그때그때 필요할 때 가져다 쓸수 있는 것이 라이브러리입니다.
@@ -104,7 +104,7 @@ uploadToSomeAPI()
 
 출처 : [https://www.notion.so/4eed5a2343bb4f09874fe6c56ea4ace8?v=138c8b8b488e42b6a2cc603714db9e4f]
  
- 
+ <br/><br/>
 # Virtual DOM
 > 화면이 어떤 모습이어야 하는지 개발자가 작성한 내용과 실제 화면에 렌더링되는 것 사이에 존재하는 레이어
 
@@ -113,6 +113,153 @@ uploadToSomeAPI()
   
 * 리액트는 페이지의 변화를 바로 렌더링하지 않고 먼저 메모리에 존재하는 가상 DOM에서 변화가 필요한 곳을 계산하고 필요한 최소한의 변경사항만 렌더링한다. 
 
-
+<br/><br/>
 # Life Cycle
 > 
+
+
+<br/><br/>
+# JavaScript Basics Before You Learn React Summary
+> 리액트를 공부하기 전에 알아야 할 필수적인 자바스크립트 기본 지식 정리
+
+## ES6 Classes
+
+```javascript
+class Developer {
+  constructor(name){
+    this.name = name;
+  }
+
+  hello(){
+    return 'Hello World! I am ' + this.name + ' and I am a web developer';
+  }
+}
+```
+
+
+```javascript
+var nathan = new Developer('Nathan');
+nathan.hello(); // Hello World! I am Nathan and I am a web developer
+```
+
+<br/><br/>
+
+## Class inheritance
+> 클래스는 다른 클래스의 정의를 확장할 수 있으며, 클래스에서 초기화된 새로운 개체는 두 클래스의 모든 방법을 가진다.
+
+```javascript
+class ReactDeveloper extends Developer {
+  installReact(){
+    return 'installing React .. Done.';
+  }
+}
+
+var nathan = new ReactDeveloper('Nathan');
+nathan.hello(); // Hello World! I am Nathan and I am a web developer
+nathan.installReact(); // installing React .. Done.
+
+```
+
+<br/>
+
+### overriding 
+
+```javascript
+class ReactDeveloper extends Developer {
+  installReact(){
+    return 'installing React .. Done.';
+  }
+
+  hello(){
+    return 'Hello World! I am ' + this.name + ' and I am a REACT developer';
+  }
+}
+
+var nathan = new ReactDeveloper('Nathan');
+nathan.hello(); // Hello World! I am Nathan and I am a REACT developer
+
+```
+
+<br/><br/>
+
+## Use in React
+> 이것은 리액트 컴포넌트지만, 사실 리액트 패키지에서 가져온 리액트 컴포넌트 클래스의 정의를 계승하는 일반적인 ES6 클래스일 뿐이다.
+
+```javascript
+
+import React, { Component } from 'react';
+
+class App extends Component {
+  // class content
+  render(){
+    return (
+      <h1>Hello React!</h1>
+    )
+  }
+}
+
+```
+
+* 그러나 나중에 알게 되겠지만, Class만이 리액트 컴포넌트를 정의하는 유일한 방법은 아니다. 
+* state 및 다른 life cycle 방법이 필요하지 않으면 대신 function 을 사용할 수 있다.
+
+## Declaring variables with ES6 let and const
+> JS에서의 var 키워드 변수 선언은 전역적이기 때문에, 2개의 새로운 방법이 ES6에서 소개되었다.
+> let과 const는 이러한 이슈들을 해결한다.
+
+```javascript
+const name = "David";
+let age = 28;
+var occupation = "Software Engineer";
+```
+
+* let과 const의 차이점 : const는 선언 이후 값의 변화를 허용하지 않는다 / let은 허용한다.
+* 둘다 local declaration이다. function scope 내부에서 선언했다면 외부에서 호출할 수 없다.
+
+#### rule of thumb
+
+* 기본적인 선언은 const로 한다. 이후 application을 작성할 때 값에 변화를 주어야 한다면 그 때 let으로 refactor한다.
+
+
+EX >
+
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component {
+  // class content
+  render(){
+    const greeting = 'Welcome to React';
+    return (
+      <h1>{greeting}</h1>
+    )
+  }
+}
+```
+
+```javascript
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
