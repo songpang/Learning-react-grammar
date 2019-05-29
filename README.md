@@ -1,5 +1,5 @@
 # Learning-react-grammar
-> 리액트(네이티브)를 공부하면서 몰랐던 지식들을 정리합니다.
+> 리액트(네이티브)를 공부하면서 필요한 지식들을 정리합니다. (ES6, React, JS, etc...)
 
 <br/><br/>
 ## 두꺼운 화살표 함수 ( => )
@@ -203,6 +203,7 @@ class App extends Component {
 * 그러나 나중에 알게 되겠지만, Class만이 리액트 컴포넌트를 정의하는 유일한 방법은 아니다. 
 * state 및 다른 life cycle 방법이 필요하지 않으면 대신 function 을 사용할 수 있다.
 
+<br/>
 ## Declaring variables with ES6 let and const
 > JS에서의 var 키워드 변수 선언은 전역적이기 때문에, 2개의 새로운 방법이 ES6에서 소개되었다.
 > let과 const는 이러한 이슈들을 해결한다.
@@ -216,12 +217,27 @@ var occupation = "Software Engineer";
 * let과 const의 차이점 : const는 선언 이후 값의 변화를 허용하지 않는다 / let은 허용한다.
 * 둘다 local declaration이다. function scope 내부에서 선언했다면 외부에서 호출할 수 없다.
 
+<br/>
 #### rule of thumb
 
 * 기본적인 선언은 const로 한다. 이후 application을 작성할 때 값에 변화를 주어야 한다면 그 때 let으로 refactor한다.
 
+EX)
+```javascript
+import React, { Component } from 'react';
 
-EX >
+class App extends Component {
+  // class content
+  render(){
+    const greeting = 'Welcome to React';
+    return (
+      <h1>{greeting}</h1>
+    )
+  }
+}
+```
+
+#### React에서의 사용
 
 ```javascript
 import React, { Component } from 'react';
@@ -236,6 +252,7 @@ class App extends Component {
   }
 }
 ```
+
 
 ```javascript
 
