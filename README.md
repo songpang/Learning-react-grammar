@@ -66,7 +66,7 @@ testFunction();
 ```
 
 * Use in React
-> React component를 생성하는 또 다른 방법 ( arrow function을 사용하여 )
+> React component를 생성하는 또 다른 방법 ( arrow function을 사용하여 ) <br/>
 > 하단의 두 코드는 동등한 수준의 코드
 
 ```javascript
@@ -264,6 +264,7 @@ class App extends Component {
 * state 및 다른 life cycle 방법이 필요하지 않으면 대신 function 을 사용할 수 있다.
 
 <br/>
+
 ## Declaring variables with ES6 let and const
 > JS에서의 var 키워드 변수 선언은 전역적이기 때문에, 2개의 새로운 방법이 ES6에서 소개되었다.
 > let과 const는 이러한 이슈들을 해결한다.
@@ -278,7 +279,8 @@ var occupation = "Software Engineer";
 * 둘다 local declaration이다. function scope 내부에서 선언했다면 외부에서 호출할 수 없다.
 
 <br/>
-#### rule of thumb
+
+### rule of thumb
 
 * 기본적인 선언은 const로 한다. 이후 application을 작성할 때 값에 변화를 주어야 한다면 그 때 let으로 refactor한다.
 
@@ -297,7 +299,7 @@ class App extends Component {
 }
 ```
 
-#### React에서의 사용
+### React에서의 사용
 
 ```javascript
 import React, { Component } from 'react';
@@ -313,14 +315,62 @@ class App extends Component {
 }
 ```
 
+## Destructuring assignment for arrays and objects
+> 구조 분해 할당
+
+* 구조분해 할당은 간단히 array나 object의 일부분을 복사한다.
 
 ```javascript
+const developer = {
+  firstName: 'Nathan',
+  lastName: 'Sebhastian',
+  developer: true,
+  age: 25,
+}
 
+//destructure developer object
+const { firstName, lastName } = developer;
+console.log(firstName); // returns 'Nathan'
+console.log(lastName); // returns 'Sebhastian'
+console.log(developer); // returns the object
+```
+
+* 새로운 변수에 할당.
+> firstName을 name이라는 새로운 변수에 넣는다.
+
+```javascript
+const { firstName:name } = developer;
+console.log(name); // returns 'Nathan'
+```
+
+* 구조분해는 array에게도 동작한다.
+
+```javascript
+const numbers = [1,2,3,4,5];
+const [one, two] = numbers; // one = 1, two = 2
+```
+
+* ,를 사용한 구조분해를 통해 index를 skip할 수 있다.
+
+```javascript
+const [one, two, , four] = numbers; // one = 1, two = 2, four = 4
+```
+
+### Use in React
+
+* method에서 구조분해 state가 가장 많이 사용된다.
+
+```javascript
+reactFunction = () => {
+  const { name, email } = this.state;
+};
 ```
 
 
 
+```javascript
 
+```
 
 
 
