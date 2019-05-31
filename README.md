@@ -85,7 +85,7 @@ class HelloWorld extends Component {
 ```
 
 * arrow function의 사용은 코드를 간결하게 해주지만 component의 state사용을 제거한다.
-> statless functional component
+> stateless functional component
 
 
 <br/><br/>
@@ -366,12 +366,100 @@ reactFunction = () => {
 };
 ```
 
-
+* functional stateless component에서 
 
 ```javascript
+const HelloWorld = (props) => {
+  return <h1>{props.hello}</h1>;
+}
 
 ```
 
+* 아래와 같이 비구조화 하여 사용할 수 있다.
+```javascript
+const HelloWorld = ({ hello }) => {
+  return <h1>{hello}</h1>;
+}
+
+```
+
+## Map and filter
+> 데이터 처리에 특히 많이 이용된다.
+
+```javascript
+const users = [
+  { name: 'Nathan', age: 25 },
+  { name: 'Jack', age: 30 },
+  { name: 'Joe', age: 28 },
+];
+```
+
+* 아래와 같이 map method를 사용하여 리액트에서 아이템들의 리스트를 렌더링할 수 있다. 
+
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component {
+  // class content
+  render(){
+    const users = [
+      { name: 'Nathan', age: 25 },
+      { name: 'Jack', age: 30 },
+      { name: 'Joe', age: 28 },
+    ];
+
+    return (
+      <ul>
+        {
+           users.map(user => <li>{user.name}</li>)
+        }
+      </ul>
+    )
+  }
+}
+```
+* filter를 사용하여 렌더링 할 수 있다.
+```javascript
+<ul>
+  {users
+    .filter(user => user.age > 26)
+    .map(user => <li>{user.name}</li>)
+  }
+</ul>
+```
+
+(?) map method example
+
+```javascript
+var array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+
+```
+
+## ES6 module system
+> ES6 모듈 시스템은 자바스크립트가 파일을 가져오고 내보낼 수 있게 해준다.
+
+* 네이밍된 export는 모듈당 여러 개를 가질 수 있다.
+* 하지만 export default는 오직 하나만 있을 수 있다.
+
+```javascript
+
+
+```
+```javascript
+
+
+```
+```javascript
+
+
+```
+(?) curly braces : {}
 
 
 
