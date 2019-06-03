@@ -459,12 +459,7 @@ console.log(map1);
 
 
 ```
-(?) curly braces : {}
-
-
-
-
-
+(?) curly braces : {} (괄호)
 
 
 
